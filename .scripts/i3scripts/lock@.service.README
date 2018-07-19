@@ -1,0 +1,22 @@
+Add following lines to lock@.service file in /etc/systemd/system:
+
+[Unit]
+Description=i3lock on suspend
+After=sleep.target
+
+[Service]
+User=USER
+Type=forking
+Environment=DISPLAY=:0
+ExecStart=/path/to/i3lock/script
+#example(mine): /home/ivar94/.scripts/i3scripts/i3lock.sh
+
+[Install]
+WantedBy=sleep.target
+
+# make this file executable:
+# $sudo chmod +x lock@.service
+#
+#enable systemctl service for USER:
+# $systemctl enable lock@USER.service
+

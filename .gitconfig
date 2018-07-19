@@ -1,0 +1,6 @@
+[user]
+	name = Uros Zivkovic
+	email = ivar0x5e@gmail.com
+[alias]
+	ss = status -s
+	ld = log --oneline --all --graph --decorate
